@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.29684296, g: 0.6337676, b: 0.9937157, a: 1}
+  m_IndirectSpecularColor: {r: 0.29684302, g: 0.6337671, b: 0.9937157, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -620,14 +620,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.00000019283515, y: 0.9659259, z: -0.25881907, w: -0.00000071967077}
+  m_LocalPosition: {x: 0, y: 1.41, z: 0.972}
+  m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000004}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: 180, z: 0}
 --- !u!1001 &7209161058076379121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -635,6 +635,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 600909202586343232, guid: 7ec39293ba15e1141803e71f519a65ba, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.567
+      objectReference: {fileID: 0}
     - target: {fileID: 747209194058683793, guid: 7ec39293ba15e1141803e71f519a65ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.129
@@ -703,6 +707,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2767864597546869326, guid: 7ec39293ba15e1141803e71f519a65ba, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.567
+      objectReference: {fileID: 0}
     - target: {fileID: 7426633128156510357, guid: 7ec39293ba15e1141803e71f519a65ba, type: 3}
       propertyPath: m_Name
       value: Player
@@ -737,3 +745,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.2, z: 0}
+--- !u!114 &7209161058076379126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7209161058076379122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55bbe56c44bd38c448e31208fe4a45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 7209161058076379124}
+  cam: {fileID: 963194228}
+  speed: 3
+  turnSmoothTime: 0.3
+  smoothMover: 0
+  gravity: -20
+  jumpHeight: 3
+  allowJumping: 1

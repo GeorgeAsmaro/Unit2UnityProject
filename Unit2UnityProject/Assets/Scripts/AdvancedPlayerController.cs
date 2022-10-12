@@ -64,7 +64,7 @@ public class AdvancedPlayerController : MonoBehaviour
     void ApplyGravity()
     {
         // Code for gravity
-        if (controller.isGrounded && velocity.y < 0)
+        if (controller.isGrounded && velocity.y <= 0)
         {
             velocity.y = 0f;
         }
@@ -77,7 +77,7 @@ public class AdvancedPlayerController : MonoBehaviour
     {
         if (allowJumping && Input.GetButtonDown("Jump") && controller.isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
         }
     }
 }

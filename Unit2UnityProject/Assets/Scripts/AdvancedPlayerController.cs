@@ -9,6 +9,9 @@ public class AdvancedPlayerController : MonoBehaviour
     public Transform cam;
 
     public float speed = 6f;
+    public float jumpTimer = 0.0f;
+    public float waitTime = 0.0f;
+    bool jumped = false;
 
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
@@ -75,9 +78,25 @@ public class AdvancedPlayerController : MonoBehaviour
 
     void ProcessJumping()
     {
+
+        //Time.timeScale = waitTime;
+        //jumpTimer += Time.deltaTime;
+
         if (allowJumping && Input.GetButtonDown("Jump") && controller.isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
         }
+
+        //if (Input.GetButtonDown("Jump"))
+        //{
+        //    jumped = true;
+        //}
+
+
+        //if (jumpTimer > waitTime)
+        //{
+        //    jumped = false;
+        //    jumpTimer = jumpTimer - waitTime;
+        //}
     }
 }

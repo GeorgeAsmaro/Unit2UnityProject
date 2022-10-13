@@ -288,7 +288,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finish Line
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5716681864270162303, guid: 83ae5ae02fbc81545a988cec28c03666, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83ae5ae02fbc81545a988cec28c03666, type: 3}
 --- !u!1001 &53141995
 PrefabInstance:
@@ -1398,6 +1399,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5716681864270162303, guid: 83ae5ae02fbc81545a988cec28c03666, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 83ae5ae02fbc81545a988cec28c03666, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -1458,7 +1463,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finish Line (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5716681864270162303, guid: 83ae5ae02fbc81545a988cec28c03666, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83ae5ae02fbc81545a988cec28c03666, type: 3}
 --- !u!1 &838005612 stripped
 GameObject:
@@ -1762,7 +1768,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finish Line (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5716681864270162303, guid: 83ae5ae02fbc81545a988cec28c03666, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83ae5ae02fbc81545a988cec28c03666, type: 3}
 --- !u!1 &1065386189 stripped
 GameObject:

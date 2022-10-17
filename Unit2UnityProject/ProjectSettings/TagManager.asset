@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Destroyable
   - MovingPlatform
+  - Wall
   layers:
   - Default
   - TransparentFX

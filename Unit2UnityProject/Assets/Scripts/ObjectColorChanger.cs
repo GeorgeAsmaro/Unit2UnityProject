@@ -5,16 +5,13 @@ using UnityEngine;
 public class ObjectColorChanger : MonoBehaviour
 {
 
-    private void OnTriggerEnter(Collider other)
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (other.gameObject.tag == "Player")
+        if (hit.gameObject.tag == "ColorChange")
         {
-            ChangeMyColor();
+            hit.gameObject.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         }
     }
 
-    void ChangeMyColor()
-    {
-        GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-    }
+    
 }

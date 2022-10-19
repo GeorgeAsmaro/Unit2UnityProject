@@ -6,7 +6,7 @@ public class StayOnObject : MonoBehaviour
 {
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnControllerColliderHit(ControllerColliderHit collision)
     {
         if (collision.gameObject.CompareTag("MovingPlatform"))
         {
@@ -14,11 +14,11 @@ public class StayOnObject : MonoBehaviour
             this.transform.parent = collision.transform;
 
         }
+        else
+        {
+            this.transform.parent = null;
+        }
 
     }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("MovingPlatform"))
-            this.transform.parent = null;
-    }
+    
 }

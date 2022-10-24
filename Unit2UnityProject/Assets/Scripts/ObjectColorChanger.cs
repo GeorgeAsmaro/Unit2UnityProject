@@ -5,23 +5,48 @@ using UnityEngine;
 public class ObjectColorChanger : MonoBehaviour
 {
     bool blue = false;
-    bool continues = true;
+    bool sleep = false;
+    bool changeable = true;
+    float timer = 300;
+
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
 
-        if (hit.gameObject.tag == "ColorChange" && !blue)
+        timer += Time.deltaTime;
+
+        if (hit.gameObject.tag == "ColorChange" && !blue && changeable)
         {
             hit.gameObject.GetComponent<Renderer>().material.color = new Color(0f, 0f, 1f, 0f);
+           // Debug.Log("Blue is true");
             blue = true;
+            changeable = false;
         }
 
-        if(hit.gameObject.tag == "ColorChange" && blue)
+        if(!changeable)
+        {
+            timer--;
+
+            if(timer <=0)
+            {   
+             
+                Debug.Log("Timer finished");
+                timer = 300;
+                changeable = true;
+            }
+        }
+
+
+        if (hit.gameObject.tag == "ColorChange" && blue && changeable)
         {
             hit.gameObject.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, 1f);
+            //Debug.Log("Blue is false");
             blue = false;
+            changeable = false;
         }
     }
+
+
 
 }
 

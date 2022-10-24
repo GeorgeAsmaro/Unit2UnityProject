@@ -7,7 +7,7 @@ public class ObjectColorChanger : MonoBehaviour
     bool blue = false;
     bool sleep = false;
     bool changeable = true;
-    float timer = 300;
+    float timer = 100;
 
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -31,7 +31,7 @@ public class ObjectColorChanger : MonoBehaviour
             {   
              
                 Debug.Log("Timer finished");
-                timer = 300;
+                timer = 100;
                 changeable = true;
             }
         }
@@ -50,28 +50,4 @@ public class ObjectColorChanger : MonoBehaviour
 
 }
 
-
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-
-//public class ObjectColorChanger : MonoBehaviour
-//{
-//    //private Color renderer;
-
-
-//    private void OnControllerColliderHit(ControllerColliderHit hit)
-//    {
-//        //renderer = GetComponent<Renderer>;
-//        if (hit.gameObject.tag == "ColorChange")
-//        {
-//            Color blueColour = new Color(0f, 0f, 1f, 0f);
-//            hit.gameObject.GetComponent<Renderer>().material.color = blueColour;
-//            //GameObject.Find("Square1").GetComponent<Renderer>().material.color = new Color(0f, 0f, 1f, 0f);
-//            Debug.Log("Hit");
-//        }
-//    }
-
-
-//}
 

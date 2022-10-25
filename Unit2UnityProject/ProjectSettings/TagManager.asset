@@ -8,6 +8,14 @@ TagManager:
   - MovingPlatform
   - Wall
   - ColorChange
+  - ColorChange2
+  - ColorChange3
+  - ColorChange4
+  - ColorChange5
+  - ColorChange6
+  - ColorChange7
+  - ColorChange8
+  - ColorChange9
   layers:
   - Default
   - TransparentFX

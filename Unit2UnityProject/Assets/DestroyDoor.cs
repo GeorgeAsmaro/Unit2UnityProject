@@ -9,13 +9,6 @@ public class DestroyDoor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         GameObject stl = GameObject.Find("ColorChange");
         ObjectColorChanger cc = stl.GetComponent<ObjectColorChanger>();
 
@@ -43,11 +36,17 @@ public class DestroyDoor : MonoBehaviour
         GameObject sbr = GameObject.Find("ColorChange9");
         ObjectColorChanger cc9 = sbr.GetComponent<ObjectColorChanger>();
 
-
         if (cc.getBlue() && !cc2.getBlue() && cc3.getBlue() && !cc4.getBlue() && cc5.getBlue() && !cc6.getBlue() && cc7.getBlue() && !cc8.getBlue() && cc9.getBlue())
         {
             Debug.Log("Destroy this");
             //Destroy(this);
         }
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

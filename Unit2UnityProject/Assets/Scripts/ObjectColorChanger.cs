@@ -5,7 +5,6 @@ using UnityEngine;
 public class ObjectColorChanger : MonoBehaviour
 {
     bool blue = false;
-    bool sleep = false;
     bool changeable = true;
     float timer = 100;
 

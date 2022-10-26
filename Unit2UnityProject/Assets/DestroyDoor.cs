@@ -9,32 +9,6 @@ public class DestroyDoor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject stl = new GameObject();
-        bool blue = stl.GetComponent<ObjectColorChanger>().getBlue();
-
-        GameObject stm = new GameObject();
-        bool blue2 = stm.GetComponent<ObjectColorChanger>().getBlue();
-
-        GameObject str = new GameObject();
-        bool blue3 = str.GetComponent<ObjectColorChanger>().getBlue();
-
-        GameObject sml = new GameObject();
-        bool blue4 = sml.GetComponent<ObjectColorChanger>().getBlue();
-
-        GameObject smm = new GameObject();
-        bool blue5 = smm.GetComponent<ObjectColorChanger>().getBlue();
-
-        GameObject smr = new GameObject();
-        bool blue6 = smr.GetComponent<ObjectColorChanger>().getBlue();
-
-        GameObject sbl = new GameObject();
-        bool blue7 = sbl.GetComponent<ObjectColorChanger>().getBlue();
-
-        GameObject sbm = new GameObject();
-        bool blue8 = sbm.GetComponent<ObjectColorChanger>().getBlue();
-
-        GameObject sbr = new GameObject();
-        bool blue9 = sbr.GetComponent<ObjectColorChanger>().getBlue();
 
 
         //GameObject stl = GameObject.Find("ColorChange");

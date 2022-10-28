@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class DestroyDoor : MonoBehaviour
 {
-
+    public GameObject door;
+    bool destroyed = false;
+    public BoxCollider boxCol;
+    public MeshRenderer renderer;
 
     // Start is called before the first frame update
     void Start()
@@ -15,10 +18,12 @@ public class DestroyDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool destroyed = false;
+        boxCol = door.GetComponent<BoxCollider>();
+        renderer = door.GetComponent<MeshRenderer>();
 
-        if(!destroyed)
+        if (!destroyed)
         {
+
             GameObject stl = GameObject.Find("TopLeft");
             bool blue = stl.GetComponent<CheckBlue>().getResults();
 
@@ -46,10 +51,11 @@ public class DestroyDoor : MonoBehaviour
             GameObject sbr = GameObject.Find("BottomRight");
             bool blue9 = sbr.GetComponent<CheckBlue>().getResults();
 
-            if (blue && !blue2)
+            if (blue && !blue2 && blue3 && !blue4 && blue5 && !blue6 && blue7 && !blue8 && blue9)
             {
                 Debug.Log("Destroy this");
-                //Destroy(this);
+                Destroy(boxCol);
+                Destroy(renderer);
                 destroyed = true;
             }
         }

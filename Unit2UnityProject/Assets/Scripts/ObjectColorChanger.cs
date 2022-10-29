@@ -16,7 +16,7 @@ public class ObjectColorChanger : MonoBehaviour
 
         if ((hit.gameObject.tag == "ColorChange" || hit.gameObject.tag == "ColorChange2" || hit.gameObject.tag == "ColorChange3" || hit.gameObject.tag == "ColorChange4" || hit.gameObject.tag == "ColorChange5" || hit.gameObject.tag == "ColorChange6" || hit.gameObject.tag == "ColorChange7" || hit.gameObject.tag == "ColorChange8" || hit.gameObject.tag == "ColorChange9") && !blue && changeable)
         {
-            hit.gameObject.GetComponent<Renderer>().material.color = new Color(0f, 0f, 1f, 0f);
+            hit.gameObject.GetComponent<Renderer>().material.color = new Color(0f, 0f, 1f, 1f);
             hit.gameObject.GetComponent<CheckBlue>().setResults(true);
             // Debug.Log("Blue is true");
             blue = true;

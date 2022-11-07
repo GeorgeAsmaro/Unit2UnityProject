@@ -16,6 +16,9 @@ TagManager:
   - ColorChange7
   - ColorChange8
   - ColorChange9
+  - Button1
+  - Button2
+  - Button3
   layers:
   - Default
   - TransparentFX

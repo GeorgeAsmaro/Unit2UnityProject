@@ -105,6 +105,9 @@ public class ThirdLevelScript : MonoBehaviour
         GameObject movingPlatform = GameObject.Find("MovingPlatform");
         anim = movingPlatform.GetComponent<Animation>();
 
+        GameObject testPlat = GameObject.Find("TestPlatform");
+        
+
         GameObject player1 = GameObject.Find("Player");
         GameObject player2 = GameObject.Find("Player2");
         bool button1Pressed = player1.GetComponent<ButtonPressed>().getButton1();
@@ -118,6 +121,7 @@ public class ThirdLevelScript : MonoBehaviour
         if (button1Pressed || button1Pressed2)
         {
             anim.Play("UpAndDown");
+            
             button1Pressed = player1.GetComponent<ButtonPressed>().setButton1(false);
             button1Pressed2 = player2.GetComponent<ButtonPressed>().setButton1(false);
 

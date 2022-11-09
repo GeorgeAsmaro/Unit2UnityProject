@@ -8,6 +8,7 @@ public class ThirdLevelScript : MonoBehaviour
     public GameObject movingPlatform;
     private Animation anim;
     private Animation buttonpress;
+    private Animation rockWallAnim;
     public GameObject player1;
     public GameObject player2;
     public GameObject button1;
@@ -26,6 +27,7 @@ public class ThirdLevelScript : MonoBehaviour
     public MeshRenderer rock4Rend;
     public MeshRenderer rock5Rend;
     public MeshRenderer rockWallRend;
+    bool animatonPlayed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -85,8 +87,15 @@ public class ThirdLevelScript : MonoBehaviour
 
         if (active)
         {
+            
             rock1Col.enabled = true;
             rock1Rend.enabled = true;
+            if(!animatonPlayed)
+            {
+                rockWallAnim.Play("RockClimbWall");
+                animatonPlayed = true;
+            }
+            
 
             rock2Col.enabled = true;
             rock2Rend.enabled = true;
@@ -111,6 +120,9 @@ public class ThirdLevelScript : MonoBehaviour
         buttonpress = button1.GetComponent<Animation>();
 
         GameObject testPlat = GameObject.Find("TestPlatform");
+
+        rockWallAnim = rockWall.GetComponent<Animation>();
+
         
 
         GameObject player1 = GameObject.Find("Player");
@@ -128,6 +140,7 @@ public class ThirdLevelScript : MonoBehaviour
             buttonpress.Play("buttonPress");
             anim.Play("UpAndDown");
             
+            
             button1Pressed = player1.GetComponent<ButtonPressed>().setButton1(false);
             button1Pressed2 = player2.GetComponent<ButtonPressed>().setButton1(false);
 
@@ -136,7 +149,8 @@ public class ThirdLevelScript : MonoBehaviour
         if (button2Pressed || button2Pressed2)
         {
             active = true;
-         
+            
+
         }
 
 

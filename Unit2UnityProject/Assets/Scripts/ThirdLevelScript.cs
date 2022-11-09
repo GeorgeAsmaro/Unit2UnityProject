@@ -7,8 +7,10 @@ public class ThirdLevelScript : MonoBehaviour
 
     public GameObject movingPlatform;
     private Animation anim;
+    private Animation buttonpress;
     public GameObject player1;
     public GameObject player2;
+    public GameObject button1;
     bool active = false;
 
     public BoxCollider rock1Col;
@@ -105,6 +107,9 @@ public class ThirdLevelScript : MonoBehaviour
         GameObject movingPlatform = GameObject.Find("MovingPlatform");
         anim = movingPlatform.GetComponent<Animation>();
 
+        GameObject button1 = GameObject.Find("ButtonPress");
+        buttonpress = button1.GetComponent<Animation>();
+
         GameObject testPlat = GameObject.Find("TestPlatform");
         
 
@@ -120,6 +125,7 @@ public class ThirdLevelScript : MonoBehaviour
 
         if (button1Pressed || button1Pressed2)
         {
+            buttonpress.Play("buttonPress");
             anim.Play("UpAndDown");
             
             button1Pressed = player1.GetComponent<ButtonPressed>().setButton1(false);

@@ -15,6 +15,7 @@ public class ThirdLevelScript : MonoBehaviour
     private Animation rock3Anim;
     private Animation rock4Anim;
     private Animation rock5Anim;
+    private Animation floating2Anim;
 
     public GameObject player1;
     public GameObject player2;
@@ -24,6 +25,7 @@ public class ThirdLevelScript : MonoBehaviour
     public GameObject rock3Obj;
     public GameObject rock4Obj;
     public GameObject rock5Obj;
+    public GameObject floatingPart2;
     bool active = false;
 
     public BoxCollider rock1Col;
@@ -94,6 +96,9 @@ public class ThirdLevelScript : MonoBehaviour
         GameObject rock5Obj = GameObject.Find("Rock4");
         rock5Anim = rock5Obj.GetComponent<Animation>();
 
+        GameObject floating2 = GameObject.Find("FloatingPart2");
+        floating2Anim = floating2.GetComponent<Animation>();
+
 
 
         if (!active)
@@ -163,6 +168,8 @@ public class ThirdLevelScript : MonoBehaviour
                 rock4Anim.Play("rock4Anim");
 
                 rock5Anim.Play("rock5Anim");
+
+                floating2Anim.Play("Floating2Anim");
 
                 animatonPlayedBlocks = true;
             }

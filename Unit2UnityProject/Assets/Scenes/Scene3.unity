@@ -6617,6 +6617,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1708314750}
+  - component: {fileID: 1708314751}
   m_Layer: 0
   m_Name: FloatingPart2
   m_TagString: Untagged
@@ -6632,7 +6633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708314749}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6642,6 +6643,22 @@ Transform:
   m_Father: {fileID: 1844763120}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &1708314751
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708314749}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 4547e1a2d82711449b62aef773fd85a3, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1708706994
 GameObject:
   m_ObjectHideFlags: 0
@@ -8050,6 +8067,7 @@ MonoBehaviour:
   rock3Obj: {fileID: 0}
   rock4Obj: {fileID: 0}
   rock5Obj: {fileID: 0}
+  floatingPart2: {fileID: 0}
   rock1Col: {fileID: 0}
   rock2Col: {fileID: 0}
   rock3Col: {fileID: 0}

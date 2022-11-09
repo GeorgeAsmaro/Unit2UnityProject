@@ -16,6 +16,7 @@ public class ThirdLevelScript : MonoBehaviour
     private Animation rock4Anim;
     private Animation rock5Anim;
     private Animation floating2Anim;
+    private Animation buttonpress2;
 
     public GameObject player1;
     public GameObject player2;
@@ -26,6 +27,7 @@ public class ThirdLevelScript : MonoBehaviour
     public GameObject rock4Obj;
     public GameObject rock5Obj;
     public GameObject floatingPart2;
+    public GameObject button2;
     bool active = false;
 
     public BoxCollider rock1Col;
@@ -44,6 +46,8 @@ public class ThirdLevelScript : MonoBehaviour
     bool animatonPlayedWall = false;
 
     bool animatonPlayedBlocks = false;
+
+    bool Button2Unpressed = true;
     int timer = 100;
 
     // Start is called before the first frame update
@@ -213,6 +217,14 @@ public class ThirdLevelScript : MonoBehaviour
         {
             active = true;
             
+            if(Button2Unpressed)
+            {
+                GameObject button2 = GameObject.Find("ButtonPress2");
+                buttonpress2 = button2.GetComponent<Animation>();
+
+                buttonpress2.Play("button2Press");
+                Button2Unpressed = false;
+            }
 
         }
 

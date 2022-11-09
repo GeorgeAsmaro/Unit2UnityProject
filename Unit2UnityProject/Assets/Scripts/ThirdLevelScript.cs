@@ -6,12 +6,24 @@ public class ThirdLevelScript : MonoBehaviour
 {
 
     public GameObject movingPlatform;
+
     private Animation anim;
     private Animation buttonpress;
     private Animation rockWallAnim;
+    private Animation rock1Anim;
+    private Animation rock2Anim;
+    private Animation rock3Anim;
+    private Animation rock4Anim;
+    private Animation rock5Anim;
+
     public GameObject player1;
     public GameObject player2;
     public GameObject button1;
+    public GameObject rock1Obj;
+    public GameObject rock2Obj;
+    public GameObject rock3Obj;
+    public GameObject rock4Obj;
+    public GameObject rock5Obj;
     bool active = false;
 
     public BoxCollider rock1Col;
@@ -27,7 +39,10 @@ public class ThirdLevelScript : MonoBehaviour
     public MeshRenderer rock4Rend;
     public MeshRenderer rock5Rend;
     public MeshRenderer rockWallRend;
-    bool animatonPlayed = false;
+    bool animatonPlayedWall = false;
+
+    bool animatonPlayedBlocks = false;
+    int timer = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +79,23 @@ public class ThirdLevelScript : MonoBehaviour
         rockWallCol = rockWall.GetComponent<BoxCollider>();
         rockWallRend = rockWall.GetComponent<MeshRenderer>();
 
+        GameObject rock1Obj = GameObject.Find("Rock1");
+        rock1Anim = rock1Obj.GetComponent<Animation>();
+
+        GameObject rock2Obj = GameObject.Find("Rock5");
+        rock2Anim = rock2Obj.GetComponent<Animation>();
+
+        GameObject rock3Obj = GameObject.Find("Rock2");
+        rock3Anim = rock3Obj.GetComponent<Animation>();
+
+        GameObject rock4Obj = GameObject.Find("Rock3");
+        rock4Anim = rock4Obj.GetComponent<Animation>();
+
+        GameObject rock5Obj = GameObject.Find("Rock4");
+        rock5Anim = rock5Obj.GetComponent<Animation>();
+
+
+
         if (!active)
         {
             rock1Col.enabled = false;
@@ -87,30 +119,54 @@ public class ThirdLevelScript : MonoBehaviour
 
         if (active)
         {
+            timer--;
             
-            rock1Col.enabled = true;
-            rock1Rend.enabled = true;
-            if(!animatonPlayed)
+            if(!animatonPlayedWall)
             {
+
+                rockWallCol.enabled = true;
+                rockWallRend.enabled = true;
+
                 rockWallAnim.Play("RockClimbWall");
-                animatonPlayed = true;
+
+                
+
+
+                animatonPlayedWall = true;
+            }
+
+            
+            if(timer <= 0 && !animatonPlayedBlocks)
+            {
+                rock1Col.enabled = true;
+                rock1Rend.enabled = true;
+
+                rock2Col.enabled = true;
+                rock2Rend.enabled = true;
+
+                rock3Col.enabled = true;
+                rock3Rend.enabled = true;
+
+                rock4Col.enabled = true;
+                rock4Rend.enabled = true;
+
+                rock5Col.enabled = true;
+                rock5Rend.enabled = true;
+
+
+                rock1Anim.Play("rock1Anim");
+
+                rock2Anim.Play("rock2Anim");
+
+                rock3Anim.Play("rock3Anim");
+
+                rock4Anim.Play("rock4Anim");
+
+                rock5Anim.Play("rock5Anim");
+
+                animatonPlayedBlocks = true;
             }
             
-
-            rock2Col.enabled = true;
-            rock2Rend.enabled = true;
-
-            rock3Col.enabled = true;
-            rock3Rend.enabled = true;
-
-            rock4Col.enabled = true;
-            rock4Rend.enabled = true;
-
-            rock5Col.enabled = true;
-            rock5Rend.enabled = true;
-
-            rockWallCol.enabled = true;
-            rockWallRend.enabled = true;
         }
 
         GameObject movingPlatform = GameObject.Find("MovingPlatform");

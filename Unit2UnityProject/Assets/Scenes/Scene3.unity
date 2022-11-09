@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.31278652, g: 0.2934003, b: 0.51392907, a: 1}
+  m_IndirectSpecularColor: {r: 0.3130118, g: 0.2936828, b: 0.5140733, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -580,6 +580,7 @@ GameObject:
   - component: {fileID: 147891891}
   - component: {fileID: 147891890}
   - component: {fileID: 147891889}
+  - component: {fileID: 147891893}
   m_Layer: 0
   m_Name: Rock4
   m_TagString: Untagged
@@ -665,6 +666,22 @@ Transform:
   m_Father: {fileID: 1420417742}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &147891893
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147891888}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: bec0970c3de22504b8a06dab76738f60, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &171190377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,7 +1178,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24880
+  m_Name: pb_Mesh25044
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1428,6 +1445,7 @@ GameObject:
   - component: {fileID: 722436770}
   - component: {fileID: 722436769}
   - component: {fileID: 722436768}
+  - component: {fileID: 722436772}
   m_Layer: 0
   m_Name: Rock2
   m_TagString: Untagged
@@ -1513,13 +1531,29 @@ Transform:
   m_Father: {fileID: 1420417742}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &722436772
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722436767}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 7f81db0d7e23ac348a3b969a902b0da1, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!43 &729010699
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25182
+  m_Name: pb_Mesh25348
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3700,6 +3734,7 @@ GameObject:
   - component: {fileID: 929730917}
   - component: {fileID: 929730916}
   - component: {fileID: 929730915}
+  - component: {fileID: 929730919}
   m_Layer: 0
   m_Name: Rock5
   m_TagString: Untagged
@@ -3785,6 +3820,22 @@ Transform:
   m_Father: {fileID: 1420417742}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &929730919
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929730914}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 9f29e1a79332e37478dd621fff7c2bc6, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &947182605
 GameObject:
   m_ObjectHideFlags: 0
@@ -4216,7 +4267,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25210
+  m_Name: pb_Mesh25376
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5055,26 +5106,22 @@ Transform:
   m_Father: {fileID: 1420417742}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1412144891
-Animator:
-  serializedVersion: 4
+--- !u!111 &1412144891
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412144886}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a1e15e9c2e267d64698f730df209ea0f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 1056f1fb4e89f9840a07c47291369105, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1420417741
 GameObject:
   m_ObjectHideFlags: 0
@@ -7540,7 +7587,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24894
+  m_Name: pb_Mesh25058
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7998,6 +8045,11 @@ MonoBehaviour:
   player1: {fileID: 0}
   player2: {fileID: 0}
   button1: {fileID: 0}
+  rock1Obj: {fileID: 0}
+  rock2Obj: {fileID: 0}
+  rock3Obj: {fileID: 0}
+  rock4Obj: {fileID: 0}
+  rock5Obj: {fileID: 0}
   rock1Col: {fileID: 0}
   rock2Col: {fileID: 0}
   rock3Col: {fileID: 0}
@@ -8213,8 +8265,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883090267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.36000013, y: 2.75, z: 0}
-  m_LocalScale: {x: 0.28716, y: 8, z: 5.2841}
+  m_LocalPosition: {x: -0.668, y: 2.75, z: 0}
+  m_LocalScale: {x: 0.7749587, y: 8, z: 5.2841}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1420417742}
@@ -8505,6 +8557,7 @@ GameObject:
   - component: {fileID: 2027558920}
   - component: {fileID: 2027558919}
   - component: {fileID: 2027558918}
+  - component: {fileID: 2027558922}
   m_Layer: 0
   m_Name: Rock3
   m_TagString: Untagged
@@ -8590,6 +8643,22 @@ Transform:
   m_Father: {fileID: 1420417742}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &2027558922
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027558917}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 833c335c6914e7f4aa894c7e69a2f2d0, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &2146316271
 GameObject:
   m_ObjectHideFlags: 0

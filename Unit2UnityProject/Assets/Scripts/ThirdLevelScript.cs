@@ -95,7 +95,7 @@ public class ThirdLevelScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(doorReOpenTime);
+        Debug.Log(podsMoveTime);
 
         GameObject rock1 = GameObject.Find("Rock1");
         rock1Col = rock1.GetComponent<BoxCollider>();
@@ -345,7 +345,7 @@ public class ThirdLevelScript : MonoBehaviour
                     spawnChanged = true;
                 }
 
-                podsToSecond = pods.GetComponent<Animation>();
+                
 
                 
 
@@ -359,17 +359,13 @@ public class ThirdLevelScript : MonoBehaviour
 
                     if (podsMoveTime <=0)
                     {
-                        podsToSecond.Play("PodsAnimation2");
+                        podPart1.Play("PodsAnimation2");
                         
                     }
 
                     while (doorReOpenTime > 0)
                     {
-                        doorReOpenTime = 73;
-                        if(doorReOpenTime = 73)
-                        {
-                            break;
-                        }
+                        doorReOpenTime--;
                     }
 
                     if (doorReOpenTime == 0)

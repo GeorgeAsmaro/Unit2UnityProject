@@ -23,6 +23,7 @@ public class ThirdLevelScript : MonoBehaviour
     private Animation podPart22;
     private Animation podPart3;
     private Animation podPart32;
+    private Animation cameraChange;
 
 
     public GameObject player1;
@@ -40,6 +41,7 @@ public class ThirdLevelScript : MonoBehaviour
     public GameObject PodDoor2;
     public GameObject player2WP;
     public GameObject player1WP;
+    public GameObject camera;
     bool active = false;
 
     public BoxCollider rock1Col;
@@ -134,6 +136,9 @@ public class ThirdLevelScript : MonoBehaviour
 
         GameObject PodDoor2 = GameObject.Find("PodDoor2");
         podPart22 = PodDoor2.GetComponent<Animation>();
+
+        GameObject camera = GameObject.Find("Main Camera");
+        cameraChange = camera.GetComponent<Animation>();
 
         
 
@@ -298,7 +303,7 @@ public class ThirdLevelScript : MonoBehaviour
 
         }
 
-        if((part1Touched || part1Touched2) && (part2Touched || part2Touched2))
+        if((part1Touched && part2Touched2))
         {
             doorCloseTime--;
             podPart3 = PodDoor1.GetComponent<Animation>();
@@ -310,6 +315,7 @@ public class ThirdLevelScript : MonoBehaviour
                 podPart32.Play("PodsDoorAnim1");
                 doorCloseAnimPlayed = true;
 
+                cameraChange.Play("CameraChange");
                 
             }
             

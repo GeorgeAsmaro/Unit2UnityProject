@@ -18,6 +18,9 @@ public class ThirdLevelScript : MonoBehaviour
     private Animation floating2Anim;
     private Animation buttonpress2;
     private Animation buttonpress3;
+    private Animation podPart1;
+    private Animation podPart2;
+    private Animation podPart22;
 
     public GameObject player1;
     public GameObject player2;
@@ -29,6 +32,11 @@ public class ThirdLevelScript : MonoBehaviour
     public GameObject rock5Obj;
     public GameObject floatingPart2;
     public GameObject button2;
+    public GameObject pods;
+    public GameObject PodDoor1;
+    public GameObject PodDoor2;
+    public GameObject player2WP;
+    public GameObject player1WP;
     bool active = false;
 
     public BoxCollider rock1Col;
@@ -50,8 +58,9 @@ public class ThirdLevelScript : MonoBehaviour
 
     bool Button2Unpressed = true;
     bool Button3Unpressed = true;
+    bool doorAnimPlayed = false;
     int timer = 100;
-
+    int doorOpenTime = 250;
     // Start is called before the first frame update
     void Start()
     {
@@ -104,6 +113,17 @@ public class ThirdLevelScript : MonoBehaviour
 
         GameObject floating2 = GameObject.Find("FloatingPart2");
         floating2Anim = floating2.GetComponent<Animation>();
+
+        GameObject pods = GameObject.Find("Pods");
+        podPart1 = pods.GetComponent<Animation>();
+
+        GameObject PodDoor1 = GameObject.Find("PodDoor1");
+        podPart2 = PodDoor1.GetComponent<Animation>();
+
+        GameObject PodDoor2 = GameObject.Find("PodDoor2");
+        podPart22 = PodDoor2.GetComponent<Animation>();
+
+        
 
 
 
@@ -232,6 +252,7 @@ public class ThirdLevelScript : MonoBehaviour
 
         if (button3Pressed || button3Pressed2)
         {
+            doorOpenTime--;
             if(Button3Unpressed)
             {
                 GameObject button3 = GameObject.Find("ButtonPress3");
@@ -239,6 +260,18 @@ public class ThirdLevelScript : MonoBehaviour
 
                 buttonpress3.Play("button3Press");
                 Button3Unpressed = false;
+
+                podPart1.Play("PodsAnimation");
+            }
+
+            if(doorOpenTime <= 0 && !doorAnimPlayed)
+            {
+                podPart2.Play("PodsDoorAnim1");
+                podPart22.Play("PodsDoorAnim1");
+                doorAnimPlayed = true;
+
+                float p1WP = player1.GetComponent<PlayerFallWarp>().setTPLevel(-20);
+                float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-20);
             }
             
 

@@ -10,6 +10,7 @@ public class PlayerFallWarp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        getTPLevel();
         if(transform.position.y <= teleportFloorLevel)
         {
             CharacterController controller = GetComponent<CharacterController>();
@@ -22,4 +23,20 @@ public class PlayerFallWarp : MonoBehaviour
             }
         }
     }
+
+    public float getTPLevel()
+    {
+        return teleportFloorLevel;
+    }
+
+    public float setTPLevel(float TPLevel)
+    {
+        return teleportFloorLevel = TPLevel;
+    }
 }
+
+
+
+        
+   
+

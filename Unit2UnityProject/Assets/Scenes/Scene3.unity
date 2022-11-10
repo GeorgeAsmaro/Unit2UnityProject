@@ -7939,6 +7939,7 @@ GameObject:
   - component: {fileID: 1859641354}
   - component: {fileID: 1859641353}
   - component: {fileID: 1859641352}
+  - component: {fileID: 1859641356}
   m_Layer: 0
   m_Name: ButtonPress3
   m_TagString: Button3
@@ -8024,6 +8025,22 @@ Transform:
   m_Father: {fileID: 2020495274}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &1859641356
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859641351}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: ffb0ecce713f018448056988e60b07bc, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1866742363
 GameObject:
   m_ObjectHideFlags: 0

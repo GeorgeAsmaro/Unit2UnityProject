@@ -738,8 +738,8 @@ GameObject:
   - component: {fileID: 473755629}
   - component: {fileID: 473755628}
   m_Layer: 0
-  m_Name: MovingPlatform (9)
-  m_TagString: Untagged
+  m_Name: Pod2Floor
+  m_TagString: PodFloor2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1655,6 +1655,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f8920fecc177740a5a7723deafb0ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &747373616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747373606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee8ce6453713f84d81758f9255e6690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptRunner: {fileID: 0}
 --- !u!1 &767084431
 GameObject:
   m_ObjectHideFlags: 0
@@ -5421,6 +5434,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f8920fecc177740a5a7723deafb0ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1601793849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601793841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee8ce6453713f84d81758f9255e6690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptRunner: {fileID: 0}
 --- !u!1 &1654959677
 GameObject:
   m_ObjectHideFlags: 0
@@ -7251,8 +7277,8 @@ GameObject:
   - component: {fileID: 1721782295}
   - component: {fileID: 1721782294}
   m_Layer: 0
-  m_Name: MovingPlatform (9)
-  m_TagString: Untagged
+  m_Name: Pod1Floor
+  m_TagString: PodFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7924,6 +7950,8 @@ MonoBehaviour:
   pods: {fileID: 0}
   PodDoor1: {fileID: 0}
   PodDoor2: {fileID: 0}
+  player2WP: {fileID: 0}
+  player1WP: {fileID: 0}
   rock1Col: {fileID: 0}
   rock2Col: {fileID: 0}
   rock3Col: {fileID: 0}

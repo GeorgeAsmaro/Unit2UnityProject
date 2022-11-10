@@ -19,6 +19,8 @@ TagManager:
   - Button1
   - Button2
   - Button3
+  - PodFloor
+  - PodFloor2
   layers:
   - Default
   - TransparentFX

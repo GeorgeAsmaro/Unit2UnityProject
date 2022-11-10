@@ -283,8 +283,7 @@ public class ThirdLevelScript : MonoBehaviour
                 podPart22.Play("PodsDoorAnim1");
                 doorAnimPlayed = true;
 
-                float p1WP = player1.GetComponent<PlayerFallWarp>().setTPLevel(-20);
-                float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-20);
+                
             }
             
 
@@ -295,7 +294,8 @@ public class ThirdLevelScript : MonoBehaviour
 
         if((part1Touched || part1Touched2) && (part2Touched || part2Touched2))
         {
-
+            float p1WP = player1.GetComponent<PlayerFallWarp>().setTPLevel(-20);
+            float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-20);
         }
 
 

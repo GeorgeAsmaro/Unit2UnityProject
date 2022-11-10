@@ -59,6 +59,10 @@ public class ThirdLevelScript : MonoBehaviour
     bool Button2Unpressed = true;
     bool Button3Unpressed = true;
     bool doorAnimPlayed = false;
+    bool part1Touched = false;
+    bool part2Touched = false;
+    bool part1Touched2 = false;
+    bool part2Touched2 = false;
     int timer = 100;
     int doorOpenTime = 250;
     // Start is called before the first frame update
@@ -72,6 +76,8 @@ public class ThirdLevelScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+
         GameObject rock1 = GameObject.Find("Rock1");
         rock1Col = rock1.GetComponent<BoxCollider>();
         rock1Rend = rock1.GetComponent<MeshRenderer>();
@@ -216,6 +222,13 @@ public class ThirdLevelScript : MonoBehaviour
 
         GameObject player1 = GameObject.Find("Player");
         GameObject player2 = GameObject.Find("Player2");
+
+        part1Touched = player1.GetComponent<BothPlayersTouching>().getTouching();
+        part1Touched2 = player2.GetComponent<BothPlayersTouching>().getTouching();
+
+        part2Touched = player1.GetComponent<BothPlayersTouching>().getTouching2();
+        part2Touched2 = player2.GetComponent<BothPlayersTouching>().getTouching2();
+
         bool button1Pressed = player1.GetComponent<ButtonPressed>().getButton1();
         bool button2Pressed = player1.GetComponent<ButtonPressed>().getButton2();
         bool button3Pressed = player1.GetComponent<ButtonPressed>().getButton3();
@@ -280,7 +293,31 @@ public class ThirdLevelScript : MonoBehaviour
 
         }
 
+        if((part1Touched || part1Touched2) && (part2Touched || part2Touched2))
+        {
+
+        }
 
 
+    }
+
+    public bool getPart1()
+    {
+        return part1Touched;
+    }
+
+    public bool setPart1(bool touched)
+    {
+        return part1Touched = touched;
+    }
+
+    public bool getPart2()
+    {
+        return part2Touched;
+    }
+
+    public bool setPart2(bool touched)
+    {
+        return part2Touched = touched;
     }
 }

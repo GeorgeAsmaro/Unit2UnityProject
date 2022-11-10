@@ -76,9 +76,12 @@ public class ThirdLevelScript : MonoBehaviour
     bool doorCloseAnimPlayed = false;
     bool spawnChanged = false;
     bool podsMoved = false;
-    
+    bool doorreopened = false;
+    bool timer3 = false;
+
     int timer = 100;
     int doorOpenTime = 250;
+    int doorReOpenTime = 1000;
     int doorCloseTime = 250;
     int podsMoveTime = 50;
     // Start is called before the first frame update
@@ -92,7 +95,7 @@ public class ThirdLevelScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(podsMoveTime);
+        Debug.Log(doorReOpenTime);
 
         GameObject rock1 = GameObject.Find("Rock1");
         rock1Col = rock1.GetComponent<BoxCollider>();
@@ -256,6 +259,9 @@ public class ThirdLevelScript : MonoBehaviour
         bool button2Pressed2 = player2.GetComponent<ButtonPressed>().getButton2();
         bool button3Pressed2 = player2.GetComponent<ButtonPressed>().getButton3();
 
+        podPart3 = PodDoor1.GetComponent<Animation>();
+        podPart32 = PodDoor2.GetComponent<Animation>();
+
         if (button1Pressed || button1Pressed2)
         {
             buttonpress.Play("buttonPress");
@@ -301,6 +307,7 @@ public class ThirdLevelScript : MonoBehaviour
                 podPart2.Play("PodsDoorAnim2");
                 podPart22.Play("PodsDoorAnim2");
                 doorAnimPlayed = true;
+                
 
                 
             }
@@ -314,8 +321,8 @@ public class ThirdLevelScript : MonoBehaviour
         if((part1Touched && part2Touched2))
         {
             doorCloseTime--;
-            podPart3 = PodDoor1.GetComponent<Animation>();
-            podPart32 = PodDoor2.GetComponent<Animation>();
+            
+            
 
             if(doorCloseTime <= 0 && !doorCloseAnimPlayed )
             {
@@ -340,36 +347,62 @@ public class ThirdLevelScript : MonoBehaviour
 
                 podsToSecond = pods.GetComponent<Animation>();
 
-                if(spawnChanged)
-                {
-                    if(podsMoveTime > 0)
-                    {
-                        podsMoveTime--;
-                    }
-                    
-                }
+                
 
                 if(!podsMoved && spawnChanged)
                 {
-                    
 
-                    if(podsMoveTime <=0)
+                    while(podsMoveTime > 0)
+                    {
+                        podsMoveTime--;
+                    }
+
+                    if (podsMoveTime <=0)
                     {
                         podsToSecond.Play("PodsAnimation2");
-                        podsMoved = true;
+                        
                     }
+
+                    while (doorReOpenTime > 0)
+                    {
+                        doorReOpenTime = 73;
+                        if(doorReOpenTime = 73)
+                        {
+                            break;
+                        }
+                    }
+
+                    if (doorReOpenTime == 0)
+                    {
+                        podPart3.Play("PodsDoorAnim2");
+                        podPart32.Play("PodsDoorAnim2");
+                        doorreopened = true;
+                        podsMoved = true;
+                        timer3 = false;
+                     }
+
                     
-                }   
+    
+
+                    
+                }
+
                 
 
+
             }
+
+
             
+
+
+
 
             float p1WP = player1.GetComponent<PlayerFallWarp>().setTPLevel(-20);
             float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-20);
         }
 
-
+        
     }
 
     public bool getPart1()

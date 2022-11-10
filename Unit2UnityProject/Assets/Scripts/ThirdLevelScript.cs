@@ -24,6 +24,8 @@ public class ThirdLevelScript : MonoBehaviour
     private Animation podPart3;
     private Animation podPart32;
     private Animation cameraChange;
+    private Animation spawnChange;
+    private Animation spawnChange2;
 
 
     public GameObject player1;
@@ -42,6 +44,8 @@ public class ThirdLevelScript : MonoBehaviour
     public GameObject player2WP;
     public GameObject player1WP;
     public GameObject camera;
+    public GameObject spawn1;
+    public GameObject spawn2;
     bool active = false;
 
     public BoxCollider rock1Col;
@@ -69,6 +73,7 @@ public class ThirdLevelScript : MonoBehaviour
     bool part1Touched2 = false;
     bool part2Touched2 = false;
     bool doorCloseAnimPlayed = false;
+    bool spawnChanged = false;
     
     int timer = 100;
     int doorOpenTime = 250;
@@ -316,7 +321,21 @@ public class ThirdLevelScript : MonoBehaviour
                 doorCloseAnimPlayed = true;
 
                 cameraChange.Play("CameraChange");
+
+                if(!spawnChanged)
+                {
+                    GameObject spawn = GameObject.Find("Player1Spawn");
+                    spawnChange = spawn.GetComponent<Animation>();
+                    spawnChange.Play("spawnChange");
+
+                    GameObject spawn2 = GameObject.Find("Player2Spawn");
+                    spawnChange2 = spawn2.GetComponent<Animation>();
+                    spawnChange2.Play("spawnChange2");
+
+                    spawnChanged = true;
+                }
                 
+
             }
             
 

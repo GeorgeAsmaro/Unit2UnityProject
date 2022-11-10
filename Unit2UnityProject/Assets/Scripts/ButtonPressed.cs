@@ -12,7 +12,7 @@ public class ButtonPressed : MonoBehaviour
     {
         if(hit.gameObject.tag == "Button1")
         {
-            Debug.Log("Button 1 Pressed");
+            //Debug.Log("Button 1 Pressed");
             button1 = true;
         }
         if (hit.gameObject.tag == "Button2")

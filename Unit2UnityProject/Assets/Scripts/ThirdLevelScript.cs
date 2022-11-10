@@ -26,6 +26,7 @@ public class ThirdLevelScript : MonoBehaviour
     private Animation cameraChange;
     private Animation spawnChange;
     private Animation spawnChange2;
+    private Animation podsToSecond;
 
 
     public GameObject player1;
@@ -74,10 +75,12 @@ public class ThirdLevelScript : MonoBehaviour
     bool part2Touched2 = false;
     bool doorCloseAnimPlayed = false;
     bool spawnChanged = false;
+    bool podsMoved = false;
     
     int timer = 100;
     int doorOpenTime = 250;
     int doorCloseTime = 250;
+    int podsMoveTime = 50;
     // Start is called before the first frame update
     void Start()
     {
@@ -89,7 +92,7 @@ public class ThirdLevelScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        Debug.Log(podsMoveTime);
 
         GameObject rock1 = GameObject.Find("Rock1");
         rock1Col = rock1.GetComponent<BoxCollider>();
@@ -334,6 +337,29 @@ public class ThirdLevelScript : MonoBehaviour
 
                     spawnChanged = true;
                 }
+
+                podsToSecond = pods.GetComponent<Animation>();
+
+                if(spawnChanged)
+                {
+                    if(podsMoveTime > 0)
+                    {
+                        podsMoveTime--;
+                    }
+                    
+                }
+
+                if(!podsMoved && spawnChanged)
+                {
+                    
+
+                    if(podsMoveTime <=0)
+                    {
+                        podsToSecond.Play("PodsAnimation2");
+                        podsMoved = true;
+                    }
+                    
+                }   
                 
 
             }

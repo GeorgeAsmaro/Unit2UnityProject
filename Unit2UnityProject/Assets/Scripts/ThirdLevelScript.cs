@@ -21,6 +21,9 @@ public class ThirdLevelScript : MonoBehaviour
     private Animation podPart1;
     private Animation podPart2;
     private Animation podPart22;
+    private Animation podPart3;
+    private Animation podPart32;
+
 
     public GameObject player1;
     public GameObject player2;
@@ -63,8 +66,11 @@ public class ThirdLevelScript : MonoBehaviour
     bool part2Touched = false;
     bool part1Touched2 = false;
     bool part2Touched2 = false;
+    bool doorCloseAnimPlayed = false;
+    
     int timer = 100;
     int doorOpenTime = 250;
+    int doorCloseTime = 250;
     // Start is called before the first frame update
     void Start()
     {
@@ -279,8 +285,8 @@ public class ThirdLevelScript : MonoBehaviour
 
             if(doorOpenTime <= 0 && !doorAnimPlayed)
             {
-                podPart2.Play("PodsDoorAnim1");
-                podPart22.Play("PodsDoorAnim1");
+                podPart2.Play("PodsDoorAnim2");
+                podPart22.Play("PodsDoorAnim2");
                 doorAnimPlayed = true;
 
                 
@@ -294,6 +300,20 @@ public class ThirdLevelScript : MonoBehaviour
 
         if((part1Touched || part1Touched2) && (part2Touched || part2Touched2))
         {
+            doorCloseTime--;
+            podPart3 = PodDoor1.GetComponent<Animation>();
+            podPart32 = PodDoor2.GetComponent<Animation>();
+
+            if(doorCloseTime <= 0 && !doorCloseAnimPlayed )
+            {
+                podPart3.Play("PodsDoorAnim1");
+                podPart32.Play("PodsDoorAnim1");
+                doorCloseAnimPlayed = true;
+
+                
+            }
+            
+
             float p1WP = player1.GetComponent<PlayerFallWarp>().setTPLevel(-20);
             float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-20);
         }

@@ -28,7 +28,7 @@ public class OnAndOff : MonoBehaviour
     {
         if(begin)
         {
-            changeStateTimer--;
+            changeStateTimer -= Time.deltaTime;
             if (changeStateTimer <= 0)
             {
                 ChangeState();

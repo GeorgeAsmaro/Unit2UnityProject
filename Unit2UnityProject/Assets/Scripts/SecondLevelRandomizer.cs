@@ -75,49 +75,58 @@ public class SecondLevelRandomizer : MonoBehaviour
             Destroy(yellow1collider);
             Destroy(green1collider);
             Destroy(blue1collider);
+            Debug.Log("red");
         }
         else if(rand == 2)
         {
             Destroy(red1collider);
             Destroy(green1collider);
             Destroy(blue1collider);
+            Debug.Log("yellow");
         }
         else if(rand == 3)
         {
             Destroy(red1collider);
             Destroy(yellow1collider);
             Destroy(blue1collider);
+            Debug.Log("green");
         }
         else
         {
             Destroy(red1collider);
             Destroy(yellow1collider);
             Destroy(green1collider);
+            Debug.Log("blue");
         }
 
         if(rand2 == 1)
         {
             Destroy(green2collider);
             Destroy(blue2collider);
+            Debug.Log("red");
         }
         else if(rand2 == 2)
         {
             Destroy(red2collider);
             Destroy(blue2collider);
+            Debug.Log("green");
         }
         else
         {
             Destroy(red2collider);
             Destroy(green2collider);
+            Debug.Log("blue");
         }
 
         if(rand3 == 1)
         {
             Destroy(blue3collider);
+            Debug.Log("red");
         }
         else
         {
             Destroy(red3collider);
+            Debug.Log("blue");
         }
     }
 

@@ -21,6 +21,7 @@ TagManager:
   - Button3
   - PodFloor
   - PodFloor2
+  - GlassFloor
   layers:
   - Default
   - TransparentFX

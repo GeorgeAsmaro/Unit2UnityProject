@@ -27,6 +27,7 @@ public class ThirdLevelScript : MonoBehaviour
     private Animation spawnChange;
     private Animation spawnChange2;
     private Animation podsToSecond;
+    private Animation podsLeave;
 
 
     public GameObject player1;
@@ -78,12 +79,15 @@ public class ThirdLevelScript : MonoBehaviour
     bool podsMoved = false;
     bool doorreopened = false;
     bool timer3 = false;
+    bool podsLeaving = false;
+    bool doorReClose = false;
 
     int timer = 100;
     int doorOpenTime = 250;
     float doorReOpenTime = 5f;
     int doorCloseTime = 250;
     int podsMoveTime = 50;
+    float podLeaveTime = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -95,10 +99,23 @@ public class ThirdLevelScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        GameObject player1 = GameObject.Find("Player");
+        GameObject player2 = GameObject.Find("Player2");
+
+        part1Touched = player1.GetComponent<BothPlayersTouching>().getTouching();
+        part1Touched2 = player2.GetComponent<BothPlayersTouching>().getTouching();
+
+        part2Touched = player1.GetComponent<BothPlayersTouching>().getTouching2();
+        part2Touched2 = player2.GetComponent<BothPlayersTouching>().getTouching2();
+
+        
+
+        
         if (!podsMoved && spawnChanged && !doorreopened)
         {
             doorReOpenTime -= Time.deltaTime;
-            Debug.Log(doorReOpenTime);
+            
             if (doorReOpenTime <= 0)
             {
                 podPart3.Play("PodsDoorAnim2");
@@ -107,6 +124,26 @@ public class ThirdLevelScript : MonoBehaviour
                 podsMoved = true;
                 timer3 = false;
 
+            }
+        }
+
+        if(spawnChanged && !podsLeaving && doorReOpenTime <= 0)
+        {
+            
+
+            podLeaveTime -= Time.deltaTime;
+
+            if(podLeaveTime <= 2 && !doorReClose)
+            {
+                podPart3.Play("PodsDoorAnim1");
+                podPart32.Play("PodsDoorAnim1");
+                doorReClose = true;
+                
+            }
+            if (podLeaveTime <= 0)
+            {
+                podsLeave.Play("PodsLeave");
+                podsLeaving = true;
             }
         }
 
@@ -163,6 +200,8 @@ public class ThirdLevelScript : MonoBehaviour
 
         GameObject camera = GameObject.Find("Main Camera");
         cameraChange = camera.GetComponent<Animation>();
+
+        podsLeave = pods.GetComponent<Animation>();
 
         
 
@@ -255,14 +294,7 @@ public class ThirdLevelScript : MonoBehaviour
 
         
 
-        GameObject player1 = GameObject.Find("Player");
-        GameObject player2 = GameObject.Find("Player2");
-
-        part1Touched = player1.GetComponent<BothPlayersTouching>().getTouching();
-        part1Touched2 = player2.GetComponent<BothPlayersTouching>().getTouching();
-
-        part2Touched = player1.GetComponent<BothPlayersTouching>().getTouching2();
-        part2Touched2 = player2.GetComponent<BothPlayersTouching>().getTouching2();
+        
 
         bool button1Pressed = player1.GetComponent<ButtonPressed>().getButton1();
         bool button2Pressed = player1.GetComponent<ButtonPressed>().getButton2();
@@ -390,8 +422,8 @@ public class ThirdLevelScript : MonoBehaviour
 
 
 
-            float p1WP = player1.GetComponent<PlayerFallWarp>().setTPLevel(-20);
-            float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-20);
+            float p1WP = player1.GetComponent<PlayerFallWarp>().setTPLevel(-10);
+            float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-10);
         }
 
         

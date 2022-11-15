@@ -81,7 +81,7 @@ public class ThirdLevelScript : MonoBehaviour
 
     int timer = 100;
     int doorOpenTime = 250;
-    int doorReOpenTime = 1000;
+    float doorReOpenTime = 5f;
     int doorCloseTime = 250;
     int podsMoveTime = 50;
     // Start is called before the first frame update
@@ -95,7 +95,20 @@ public class ThirdLevelScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(podsMoveTime);
+        if (!podsMoved && spawnChanged && !doorreopened)
+        {
+            doorReOpenTime -= Time.deltaTime;
+            Debug.Log(doorReOpenTime);
+            if (doorReOpenTime <= 0)
+            {
+                podPart3.Play("PodsDoorAnim2");
+                podPart32.Play("PodsDoorAnim2");
+                doorreopened = true;
+                podsMoved = true;
+                timer3 = false;
+
+            }
+        }
 
         GameObject rock1 = GameObject.Find("Rock1");
         rock1Col = rock1.GetComponent<BoxCollider>();
@@ -352,33 +365,16 @@ public class ThirdLevelScript : MonoBehaviour
                 if(!podsMoved && spawnChanged)
                 {
 
-                    while(podsMoveTime > 0)
+                    while(podsMoveTime > -1)
                     {
                         podsMoveTime--;
+                        if (podsMoveTime == 0)
+                        {
+                            podPart1.Play("PodsAnimation2");
+                            break;
+
+                        }
                     }
-
-                    if (podsMoveTime <=0)
-                    {
-                        podPart1.Play("PodsAnimation2");
-                        
-                    }
-
-                    while (doorReOpenTime > 0)
-                    {
-                        doorReOpenTime--;
-                    }
-
-                    if (doorReOpenTime == 0)
-                    {
-                        podPart3.Play("PodsDoorAnim2");
-                        podPart32.Play("PodsDoorAnim2");
-                        doorreopened = true;
-                        podsMoved = true;
-                        timer3 = false;
-                     }
-
-                    
-    
 
                     
                 }

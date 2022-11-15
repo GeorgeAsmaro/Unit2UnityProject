@@ -6,7 +6,7 @@ public class ObjectColorChanger : MonoBehaviour
 {
     bool blue = false;
     bool changeable = true;
-    float timer = 100;
+    float timer = 100f;
 
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -31,7 +31,7 @@ public class ObjectColorChanger : MonoBehaviour
             {   
              
                 Debug.Log("Timer finished");
-                timer = 100;
+                timer = 100f;
                 changeable = true;
             }
         }

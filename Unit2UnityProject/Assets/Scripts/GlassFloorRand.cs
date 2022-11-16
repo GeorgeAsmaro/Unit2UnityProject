@@ -9,7 +9,9 @@ public class GlassFloorRand : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rand = Random.Range(1, 2);
+        //Random.seed = System.DateTime.Now.Millisecond;
+        rand = Random.Range(1, 3);
+        Debug.Log(rand);
     }
 
     // Update is called once per frame

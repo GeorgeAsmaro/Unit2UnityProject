@@ -24,7 +24,6 @@ public class GlassFloorRand : MonoBehaviour
         }
         else
         {
-            Debug.Log("Don't destroy");
             return false;
         }
     }

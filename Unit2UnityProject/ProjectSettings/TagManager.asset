@@ -24,6 +24,7 @@ TagManager:
   - GlassFloor
   - CheckPoint
   - Checkpoint2
+  - Laser
   layers:
   - Default
   - TransparentFX

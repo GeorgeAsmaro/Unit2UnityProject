@@ -6,7 +6,7 @@ public class GlassFloorScript : MonoBehaviour
 {
 
     private MeshRenderer rend;
-    private MeshCollider col;
+    private BoxCollider col;
     // Start is called before the first frame update
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -14,7 +14,7 @@ public class GlassFloorScript : MonoBehaviour
         {
             bool destroy = hit.gameObject.GetComponent<GlassFloorRand>().destroyThis();
             rend = hit.gameObject.GetComponent<MeshRenderer>();
-            col = hit.gameObject.GetComponent<MeshCollider>();
+            col = hit.gameObject.GetComponent<BoxCollider>();
             if(destroy)
             {
                 Destroy(rend);

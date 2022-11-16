@@ -17,10 +17,12 @@ public class GlassFloorRand : MonoBehaviour
     {
         if(rand == 1)
         {
+            Debug.Log("Destroy this");
             return true;
         }
         else
         {
+            Debug.Log("Don't destroy");
             return false;
         }
     }

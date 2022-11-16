@@ -64,11 +64,18 @@ public class SecondLevelRandomizer : MonoBehaviour
         blue2collider = blue2.GetComponent<MeshCollider>();
         blue3collider = blue3.GetComponent<MeshCollider>();
 
-        rand = Random.Range(1, 4);
+        Random.seed = System.DateTime.Now.Millisecond;
 
-        rand2 = Random.Range(1, 3);
 
-        rand3 = Random.Range(1, 2);
+        rand = Random.Range(1, 5);
+
+        rand2 = Random.Range(1, 4);
+
+        rand3 = Random.Range(1, 3);
+
+        Debug.Log(rand);
+        Debug.Log(rand2);
+        Debug.Log(rand3);
 
         if(rand == 1)
         {

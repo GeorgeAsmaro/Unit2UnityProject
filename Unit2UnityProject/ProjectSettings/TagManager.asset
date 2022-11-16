@@ -22,6 +22,8 @@ TagManager:
   - PodFloor
   - PodFloor2
   - GlassFloor
+  - CheckPoint
+  - Checkpoint2
   layers:
   - Default
   - TransparentFX

@@ -44,8 +44,6 @@ public class ObjectColorChanger : MonoBehaviour
             timerOn = true;
         }
 
-        
-
     }
 
     

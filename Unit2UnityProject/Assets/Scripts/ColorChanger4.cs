@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectColorChanger : MonoBehaviour
+public class ColorChanger4 : MonoBehaviour
 {
     bool blue = false;
     float timer = 0.01f;
@@ -11,7 +11,7 @@ public class ObjectColorChanger : MonoBehaviour
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
 
-        if (hit.gameObject.tag == "ColorChange" && !blue) {
+        if (hit.gameObject.tag == "ColorChange4" && !blue) {
             if(timer < 0) {
                 hit.gameObject.GetComponent<Renderer>().material.color = new Color(0f, 0f, 1f, 1f);
                 hit.gameObject.GetComponent<CheckBlue>().setResults(true);
@@ -20,12 +20,12 @@ public class ObjectColorChanger : MonoBehaviour
             }
             
         }
-        else if (hit.gameObject.tag != "ColorChange" && !blue) {
+        else if (hit.gameObject.tag != "ColorChange4" && !blue) {
             timer -= Time.deltaTime;
         }
 
 
-        if (hit.gameObject.tag == "ColorChange" && blue) {
+        if (hit.gameObject.tag == "ColorChange4" && blue) {
             if(timer < 0) {
                 hit.gameObject.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, 1f);
                 hit.gameObject.GetComponent<CheckBlue>().setResults(false);
@@ -35,7 +35,7 @@ public class ObjectColorChanger : MonoBehaviour
             
         }
 
-        else if (hit.gameObject.tag != "ColorChange" && blue) {
+        else if (hit.gameObject.tag != "ColorChange4" && blue) {
             timer -= Time.deltaTime;
         }
 

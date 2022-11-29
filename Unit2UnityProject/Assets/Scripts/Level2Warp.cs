@@ -2,23 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserTouch : MonoBehaviour
+public class Level2Warp : MonoBehaviour
 {
+    public GameObject warpPoint;
+    public float teleportFloorLevel;
     bool checkpoint1 = true;
     bool checkpoint2 = false;
     bool checkpoint3 = false;
     bool checkpoint4 = false;
     bool checkpoint5 = false;
-    public GameObject warpPoint;
 
-    void Update() {
-
-    }
-
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    // Update is called once per frame
+    void Update()
     {
-        if(hit.gameObject.tag == "Laser")
+        if(transform.position.y <= teleportFloorLevel)
         {
+            CharacterController controller = GetComponent<CharacterController>();
+
             if(checkpoint1 && !checkpoint2) {
                 warpPoint = GameObject.Find("Original Checkpoint");
             }
@@ -34,18 +34,18 @@ public class LaserTouch : MonoBehaviour
             else if(checkpoint5) {
                 warpPoint = GameObject.Find("Checkpoint5");
             }
-            
-            CharacterController controller = GetComponent<CharacterController>();
 
             if (controller != null)
             {
-                Debug.Log("Teleport");
                 controller.enabled = false;
                 controller.transform.position = warpPoint.transform.position;
                 controller.enabled = true;
             }
         }
+    }
 
+    private void OnControllerColliderHit(ControllerColliderHit hit) {
+        
         if(hit.gameObject.tag == "Checkpoint2") {
             checkpoint2 = true;
         }
@@ -64,3 +64,9 @@ public class LaserTouch : MonoBehaviour
         }
     }
 }
+
+
+
+        
+   
+

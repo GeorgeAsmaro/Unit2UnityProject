@@ -425,6 +425,11 @@ public class ThirdLevelScript : MonoBehaviour
             float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-10);
         }
 
+        if(podsLeaving) {
+            player1.GetComponent<Respawn>().setPodsleft(true);
+            player2.GetComponent<Respawn>().setPodsleft(true);
+        }
+
         
     }
 
@@ -447,4 +452,6 @@ public class ThirdLevelScript : MonoBehaviour
     {
         return part2Touched = touched;
     }
+
+    
 }

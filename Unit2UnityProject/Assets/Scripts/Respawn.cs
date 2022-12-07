@@ -34,7 +34,7 @@ public class Respawn : MonoBehaviour
             part2Touched = true;
             part2Touched2 = true;
         }
-        Debug.Log(lvl2Touched);
+        
         if(Input.GetButtonDown("Fire3") && !part1Touched && !part1Touched2 && !part2Touched && !part2Touched2) {
             if(controller != null) {
                 controller.enabled = false;

@@ -1408,7 +1408,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53040
+  m_Name: pb_Mesh34980
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2040,7 +2040,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53388
+  m_Name: pb_Mesh35368
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5139,7 +5139,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53418
+  m_Name: pb_Mesh35398
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5486,7 +5486,7 @@ Transform:
   m_GameObject: {fileID: 1161140452}
   m_LocalRotation: {x: 0.7071057, y: -0.0000004023313, z: -0.0000004267004, w: -0.70710796}
   m_LocalPosition: {x: 0.002998829, y: 0.93096966, z: -0.5189996}
-  m_LocalScale: {x: 1, y: 0.125, z: 2}
+  m_LocalScale: {x: 1.0605, y: 0.125, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 447393285}
@@ -6596,7 +6596,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1597324897}
-  - component: {fileID: 1597324896}
+  - component: {fileID: 1597324898}
   m_Layer: 0
   m_Name: BottomFloorPods
   m_TagString: Untagged
@@ -6604,26 +6604,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1597324896
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1597324895}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 82787dbbc4148814ea19c0dd1e3e848c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1597324897
 Transform:
   m_ObjectHideFlags: 0
@@ -6641,6 +6621,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &1597324898
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597324895}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 261d934f6910c314ea3a8901647d59ef, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 261d934f6910c314ea3a8901647d59ef, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &1599557943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6831,6 +6827,18 @@ MonoBehaviour:
   player1: {fileID: 1601793841}
   player2: {fileID: 747373606}
   levelRunner: {fileID: 0}
+--- !u!114 &1601793851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601793841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cdb953cdbedb0444b5a4f60e4036737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1621883168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: cedbcbff2839bf24c8954335656e0ebd, type: 3}
@@ -6860,7 +6868,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53054
+  m_Name: pb_Mesh34994
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7177,7 +7185,7 @@ Transform:
   m_GameObject: {fileID: 1681410372}
   m_LocalRotation: {x: 0.7071057, y: -0.0000004023313, z: -0.0000004267004, w: -0.70710796}
   m_LocalPosition: {x: 0.002998829, y: 0.93096966, z: -0.5189996}
-  m_LocalScale: {x: 1, y: 0.125, z: 2}
+  m_LocalScale: {x: 1.0513, y: 0.125, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1365139820}
@@ -9349,7 +9357,7 @@ GameObject:
   - component: {fileID: 1807806586}
   m_Layer: 0
   m_Name: ButtonPress (1)
-  m_TagString: Button1
+  m_TagString: button4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10539,7 +10547,7 @@ GameObject:
   - component: {fileID: 2039800435}
   m_Layer: 0
   m_Name: ButtonPress (1)
-  m_TagString: Button1
+  m_TagString: button4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -29,6 +29,7 @@ TagManager:
   - Checkpoint4
   - Checkpoint5
   - lvl2
+  - button4
   layers:
   - Default
   - TransparentFX

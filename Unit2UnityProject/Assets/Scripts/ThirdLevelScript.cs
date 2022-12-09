@@ -64,6 +64,7 @@ public class ThirdLevelScript : MonoBehaviour
     public MeshRenderer rock5Rend;
     public MeshRenderer rockWallRend;
     bool animatonPlayedWall = false;
+    bool button4Pressed;
 
     bool animatonPlayedBlocks = false;
 
@@ -421,8 +422,8 @@ public class ThirdLevelScript : MonoBehaviour
 
 
 
-            float p1WP = player1.GetComponent<PlayerFallWarp>().setTPLevel(-10);
-            float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-10);
+            float p1WP = player1.GetComponent<PlayerFallWarp>().setTPLevel(-9);
+            float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-9);
         }
 
         if(podsLeaving) {
@@ -451,6 +452,14 @@ public class ThirdLevelScript : MonoBehaviour
     public bool setPart2(bool touched)
     {
         return part2Touched = touched;
+    }
+
+    public bool setButton4Pressed(bool pressed) {
+        return button4Pressed = pressed;
+    }
+
+    public bool getButton4Pressed() {
+        return button4Pressed;
     }
 
     

@@ -25,6 +25,10 @@ public class BothPlayersTouching : MonoBehaviour
                 touching2 = true;
             }
         }
+
+        if(hit.gameObject.tag == "lvl2") {
+
+        }
     }
 
     public bool getTouching()

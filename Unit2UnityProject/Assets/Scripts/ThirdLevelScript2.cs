@@ -8,10 +8,10 @@ public class ThirdLevelScript2 : MonoBehaviour
     bool button4Pressed = false;
     // Start is called before the first frame update
     public void OnControllerColliderHit(ControllerColliderHit hit) {
-        while(hit.gameObject.tag == "button4") {
+        if(hit.gameObject.tag == "button4") {
             button4Pressed = true;
         }
-        while(hit.gameObject.tag != "button4") {
+        if(hit.gameObject.tag != "button4") {
             button4Pressed = false;
         }
     }

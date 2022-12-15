@@ -29,6 +29,7 @@ public class ThirdLevelScript : MonoBehaviour
     private Animation podsToSecond;
     private Animation podsLeave;
     private Animation newPodsAnim;
+    private Animation newPodsAnim2;
 
 
     public GameObject player1;
@@ -87,6 +88,7 @@ public class ThirdLevelScript : MonoBehaviour
     bool button4Pressed2 = false;
     bool botFloorPod2 = false;
     bool botFloorPod = false;
+    bool animationPlayed2 = false;
 
     int timer = 100;
     int doorOpenTime = 250;
@@ -436,16 +438,19 @@ public class ThirdLevelScript : MonoBehaviour
             player2.GetComponent<Respawn>().setPodsleft(true);
         }
 
+        GameObject newPods = GameObject.Find("BottomFloorPods");
 
         if(button4Pressed && button4Pressed2 && !animationPlayed) {
-            GameObject newPods = GameObject.Find("BottomFloorPods");
+
             newPodsAnim = newPods.GetComponent<Animation>();
             newPodsAnim.Play("botpodsup");
             animationPlayed = true;
         }
 
         if(botFloorPod && botFloorPod2 && !animationPlayed2) {
-            
+            newPodsAnim2 = newPods.GetComponent<Animation>();
+            newPodsAnim2.Play("botpodsdown");
+            animationPlayed2 = true;
         }
 
         

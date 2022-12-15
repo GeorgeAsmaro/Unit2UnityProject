@@ -429,8 +429,11 @@ public class ThirdLevelScript : MonoBehaviour
 
 
 
-            float p1WP = player1.GetComponent<PlayerFallWarp>().setTPLevel(-9);
-            float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-9);
+            if(!animationPlayed) {
+                float p1WP = player1.GetComponent<PlayerFallWarp>().setTPLevel(-9);
+                float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-9);
+            } 
+
         }
 
         if(podsLeaving) {
@@ -448,9 +451,12 @@ public class ThirdLevelScript : MonoBehaviour
             
         }
 
+        Debug.Log("BotFloorPod: " + botFloorPod);
+        Debug.Log("BotFloorPod2: " + botFloorPod2);
+
         if(botFloorPod && botFloorPod2 && !animationPlayed2) {
-            float p1WP = player1.GetComponent<PlayerFallWarp>().setTPLevel(-12);
-            float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-12);
+            float test = player1.GetComponent<PlayerFallWarp>().setTPLevel(-35);
+            float test2 = player2.GetComponent<PlayerFallWarp>().setTPLevel(-35);
             newPodsAnim2 = newPods.GetComponent<Animation>();
             newPodsAnim2.Play("botpodsdown");
             animationPlayed2 = true;

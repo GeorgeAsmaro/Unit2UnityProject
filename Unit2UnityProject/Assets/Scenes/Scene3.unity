@@ -2339,6 +2339,18 @@ MonoBehaviour:
   player1: {fileID: 1601793841}
   player2: {fileID: 747373606}
   levelRunner: {fileID: 0}
+--- !u!114 &747373619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747373606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f40b55de5c6ff45be42b0dccf4327c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &767084431
 GameObject:
   m_ObjectHideFlags: 0
@@ -6649,6 +6661,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 261d934f6910c314ea3a8901647d59ef, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 261d934f6910c314ea3a8901647d59ef, type: 2}
+  - {fileID: 7400000, guid: 52e888aa0d975bb4d8fb44b81cd1823c, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -7060,7 +7073,7 @@ GameObject:
   - component: {fileID: 1640056629}
   m_Layer: 0
   m_Name: BottomFloorPodLeft
-  m_TagString: Untagged
+  m_TagString: BottomFloorPod
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10805,7 +10818,7 @@ GameObject:
   - component: {fileID: 2070452662}
   m_Layer: 0
   m_Name: BottomFloorPodRight
-  m_TagString: Untagged
+  m_TagString: BottomFloorPod
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -30,6 +30,7 @@ TagManager:
   - Checkpoint5
   - lvl2
   - button4
+  - BottomFloorPod
   layers:
   - Default
   - TransparentFX

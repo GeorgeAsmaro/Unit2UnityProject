@@ -445,9 +445,12 @@ public class ThirdLevelScript : MonoBehaviour
             newPodsAnim = newPods.GetComponent<Animation>();
             newPodsAnim.Play("botpodsup");
             animationPlayed = true;
+            
         }
 
         if(botFloorPod && botFloorPod2 && !animationPlayed2) {
+            float p1WP = player1.GetComponent<PlayerFallWarp>().setTPLevel(-12);
+            float p2WP = player2.GetComponent<PlayerFallWarp>().setTPLevel(-12);
             newPodsAnim2 = newPods.GetComponent<Animation>();
             newPodsAnim2.Play("botpodsdown");
             animationPlayed2 = true;

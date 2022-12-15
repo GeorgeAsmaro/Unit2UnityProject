@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThirdLevelScript2 : MonoBehaviour
+public class ThirdLevelScript22 : MonoBehaviour
 {
     GameObject scriptRunner;
     bool button4Pressed = false;
@@ -29,16 +29,16 @@ public class ThirdLevelScript2 : MonoBehaviour
         GameObject scriptRunner = GameObject.Find("ScriptRunner");
 
         if(button4Pressed) {
-            scriptRunner.GetComponent<ThirdLevelScript>().setButton4Pressed(true);
+            scriptRunner.GetComponent<ThirdLevelScript>().setButton4Pressed2(true);
         }
         if(!button4Pressed) {
-            button4Pressed = scriptRunner.GetComponent<ThirdLevelScript>().setButton4Pressed(false);
+            button4Pressed = scriptRunner.GetComponent<ThirdLevelScript>().setButton4Pressed2(false);
         }
         if(botFloorTouched) {
-            scriptRunner.GetComponent<ThirdLevelScript>().setBotFloorPod(true);
+            scriptRunner.GetComponent<ThirdLevelScript>().setBotFloorPod2(true);
         }
         if(!botFloorTouched) {
-            scriptRunner.GetComponent<ThirdLevelScript>().setBotFloorPod(false);
+            scriptRunner.GetComponent<ThirdLevelScript>().setBotFloorPod2(false);
         }
     }
 }

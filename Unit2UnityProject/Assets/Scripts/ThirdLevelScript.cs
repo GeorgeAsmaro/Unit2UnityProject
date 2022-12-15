@@ -28,6 +28,7 @@ public class ThirdLevelScript : MonoBehaviour
     private Animation spawnChange2;
     private Animation podsToSecond;
     private Animation podsLeave;
+    private Animation newPodsAnim;
 
 
     public GameObject player1;
@@ -65,6 +66,7 @@ public class ThirdLevelScript : MonoBehaviour
     public MeshRenderer rockWallRend;
     bool animatonPlayedWall = false;
     bool button4Pressed;
+    bool animationPlayed = false;
 
     bool animatonPlayedBlocks = false;
 
@@ -82,6 +84,9 @@ public class ThirdLevelScript : MonoBehaviour
     bool timer3 = false;
     bool podsLeaving = false;
     bool doorReClose = false;
+    bool button4Pressed2 = false;
+    bool botFloorPod2 = false;
+    bool botFloorPod = false;
 
     int timer = 100;
     int doorOpenTime = 250;
@@ -432,6 +437,17 @@ public class ThirdLevelScript : MonoBehaviour
         }
 
 
+        if(button4Pressed && button4Pressed2 && !animationPlayed) {
+            GameObject newPods = GameObject.Find("BottomFloorPods");
+            newPodsAnim = newPods.GetComponent<Animation>();
+            newPodsAnim.Play("botpodsup");
+            animationPlayed = true;
+        }
+
+        if(botFloorPod && botFloorPod2 && !animationPlayed2) {
+            
+        }
+
         
     }
 
@@ -461,6 +477,30 @@ public class ThirdLevelScript : MonoBehaviour
 
     public bool getButton4Pressed() {
         return button4Pressed;
+    }
+
+    public bool setButton4Pressed2(bool pressed) {
+        return button4Pressed2 = pressed;
+    }
+
+    public bool getButton4Pressed2() {
+        return button4Pressed2;
+    }
+
+    public bool setBotFloorPod2(bool BottomFloorPod) {
+        return botFloorPod2 = BottomFloorPod;
+    }
+
+    public bool getBotFloorPod2() {
+        return botFloorPod2;
+    }
+
+    public bool setBotFloorPod(bool BottomFloorPod) {
+        return botFloorPod = BottomFloorPod;
+    }
+
+    public bool getBotFloorPod() {
+        return botFloorPod;
     }
 
     

@@ -9,7 +9,6 @@ public class ObjectColorChanger : MonoBehaviour
     bool timerOn = false;
 
     private void Update() {
-        Debug.Log(timer);
         if(timerOn) {
             timer -= Time.deltaTime;
         }

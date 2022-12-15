@@ -11,7 +11,6 @@ public class GlassFloorRand : MonoBehaviour
     {
         //Random.seed = System.DateTime.Now.Millisecond;
         rand = Random.Range(1, 3);
-        Debug.Log(rand);
     }
 
     // Update is called once per frame
@@ -19,7 +18,6 @@ public class GlassFloorRand : MonoBehaviour
     {
         if(rand == 1)
         {
-            Debug.Log("Destroy this");
             return true;
         }
         else

@@ -451,8 +451,6 @@ public class ThirdLevelScript : MonoBehaviour
             
         }
 
-        Debug.Log("BotFloorPod: " + botFloorPod);
-        Debug.Log("BotFloorPod2: " + botFloorPod2);
 
         if(botFloorPod && botFloorPod2 && !animationPlayed2) {
             float test = player1.GetComponent<PlayerFallWarp>().setTPLevel(-35);

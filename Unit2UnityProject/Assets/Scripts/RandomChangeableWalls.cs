@@ -25,7 +25,6 @@ public class RandomChangeableWalls : MonoBehaviour
     void Start()
     {
         rand = Random.Range(1, 4);
-        Debug.Log(rand);
     }
 
     // Update is called once per frame
